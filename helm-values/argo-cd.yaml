@@ -1,0 +1,35 @@
+global:
+  domain: argocd.app.ismail-osman.co.uk
+  #this is the default domain used by all components inside the cluster
+
+server: #argo cd API, configuring how users/tools access argocd, server is one of many components/pods of argo cd
+  service:
+    type: clusterIP #common with ingress and in production set ups
+    #this creates a kubernetes service of type clusterIP in front of the argo cd server pod
+  
+  extraArgs:
+    - --insecure
+    #This is basically saying do not terminate tls inside argo cd as ingress controller already handles this
+  
+  #generating ingress resource for argo cd server
+  ingress:
+    enabled: true
+    ingressClassName: "nginx"
+    annotations:
+      cert-manager.io/cluster-issuer: tls-cert-issuer 
+      #this is read by cert-manager controller not argo cd which then requests a certificate and stores it in the secret specified in tls.secretname
+      nginx.org/hosts: false
+      #tells nginx inc ingress controller not to restrict traffic by hostname and to accept requests for any host. 
+      #commonly used in environments where DNS set up is messy
+    hosts:
+    - argocd.app.ismail-osman.co.uk
+
+    tls:
+    - secretName: ingress-tls-cert 
+      hosts:
+      - argocd.app.ismail-osman.co.uk
+      #Tells ingress controller which certificate to use for https and which hostname is must be valid for
+
+
+
+
