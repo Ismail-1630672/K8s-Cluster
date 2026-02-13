@@ -46,7 +46,7 @@ kind: Ingress
 metadata:
   name: ismail-ingress 
   annotations: #specify cluster issuer so cert-manager knows who is responsible for issuing tls certificates for this ingress
-    cert-manager.io/cluster-issuer: tls-cert-issuer
+    cert-manager.io/cluster-issuer: "tls-cert-issuer"
 spec: 
   ingressClassName: nginx 
   tls: #ingress is responsible for terminating https (tls) traffic before it gets routed to services
