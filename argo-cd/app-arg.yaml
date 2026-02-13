@@ -14,7 +14,7 @@ spec:
     path: deployment/apps
   destination: #where to deploy, basically reference to the target cluster and namespace
     server: https://kubernetes.default.svc #points to kubernetes API server
-    namespace: deployment 
+    namespace: default  
   
   #now control how argo cd keeps the cluster in sync with git 
   syncPolicy:

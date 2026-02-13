@@ -1,0 +1,16 @@
+version: 1.2.3
+dependencies:
+  - name: argo-cd
+    repository: https://argoproj.github.io/argo-helm
+    version: 9.3.4
+  - name: cert-manager
+    repository: https://charts.jetstack.io
+    version: v1.19.2
+  - name: external-dns
+    repository: https://kubernetes-sigs.github.io/external-dns/
+    version: 1.20.0
+  - name: ingress-nginx
+    repository: https://kubernetes.github.io/ingress-nginx
+    version: 4.14.1
+digest: sha256:47eabff78ba5f05f865ba5c48012be3e683f2465f5474607d5252ef49d4fc94c
+generated: "2026-02-13T14:30:38.44277377Z"

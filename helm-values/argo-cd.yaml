@@ -4,7 +4,7 @@ global:
 
 server: #argo cd API, configuring how users/tools access argocd, server is one of many components/pods of argo cd
   service:
-    type: clusterIP #common with ingress and in production set ups
+    type: ClusterIP #common with ingress and in production set ups
     #this creates a kubernetes service of type clusterIP in front of the argo cd server pod
   
   extraArgs:
@@ -25,7 +25,7 @@ server: #argo cd API, configuring how users/tools access argocd, server is one o
     - argocd.app.ismail-osman.co.uk
 
     tls:
-    - secretName: ingress-tls-cert 
+    - secretName: argocd-server-tls
       hosts:
       - argocd.app.ismail-osman.co.uk
       #Tells ingress controller which certificate to use for https and which hostname is must be valid for

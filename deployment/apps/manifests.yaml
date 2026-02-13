@@ -16,7 +16,7 @@ spec:
         app: ismail-deployment 
     spec:
       containers: 
-      - name: nginx
+      - name: ismail-image
         image: nginx:latest 
         ports:
         - containerPort: 3000

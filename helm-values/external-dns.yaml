@@ -14,4 +14,9 @@ serviceAccount:
 domainFilters:
 - app.ismail-osman.co.uk
 
+#permissions for external-dns
+serviceAccount:
+  annotations:
+    eks.amazonaws.com/role-arn: "arn:aws:iam::972067303716:role/external-dns-20260213222926087700000003"
+
     

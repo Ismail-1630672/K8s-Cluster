@@ -6,13 +6,14 @@ crds:
 #as if they were native kubernetes objects.
 
 extraArgs:
-- --dns-01-recursive-nameservers="8.8.8.8:53"
-- --dns-01-recursive-nameservers-only
+- --dns01-recursive-nameservers="8.8.8.8:53"
+- --dns01-recursive-nameservers-only
 
 #These extraArgs configure cert manager so that it uses reliable and public DNS's for dns-01 
 #challenges or dns resolutions rather than relying on built in cluster DNS (coreDNS)
 #which can be unreliable and cached potentially leading to ACME validation failures.
 
+# permissions for cert-manager
 serviceAccount:
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::972067303716:role/cert-manager-20260122200802088500000005
+    eks.amazonaws.com/role-arn: "arn:aws:iam::972067303716:role/cert-manager-20260213222926087600000002"

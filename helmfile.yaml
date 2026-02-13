@@ -2,7 +2,7 @@ helmDefaults:
   createNamespace: true
   wait: true
   timeout: 600
-  atomic: true
+  
 
 
 repositories:
