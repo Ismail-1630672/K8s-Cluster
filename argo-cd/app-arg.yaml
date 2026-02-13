@@ -11,7 +11,7 @@ spec:
   source: #desired state in git
     repoURL: https://github.com/Ismail-1630672/K8s-Cluster.git 
     targetRevision: HEAD #use the latest commit on the default branch
-    path: deployment/apps
+    path: deployment/apps/
   destination: #where to deploy, basically reference to the target cluster and namespace
     server: https://kubernetes.default.svc #points to kubernetes API server
     namespace: default  
