@@ -10,7 +10,7 @@ spec:
   project: default #the project the application belongs to
   source: #desired state in git
     repoURL: https://github.com/Ismail-1630672/K8s-Cluster.git 
-    targetRevision: main 
+    targetRevision: HEAD 
     path: deployment/apps
     directory:
       recurse: true 
