@@ -10,14 +10,14 @@ spec:
   project: default #the project the application belongs to
   source: #desired state in git
     repoURL: https://github.com/Ismail-1630672/K8s-Cluster.git 
-    targetRevision: HEAD #use the latest commit on the default branch
+    targetRevision: main 
     path: deployment/apps
     directory:
       recurse: true 
-      include: "manifests.yaml"
+      
   destination: #where to deploy, basically reference to the target cluster and namespace
-    server: https://kubernetes.default.svc #points to kubernetes API server
-    namespace: default  
+    server: https://kubernetes.default.svc #points to kubernetes API server for cluster
+    namespace: prod-test  
   
   #now control how argo cd keeps the cluster in sync with git 
   syncPolicy:

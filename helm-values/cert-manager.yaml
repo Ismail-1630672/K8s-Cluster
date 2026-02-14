@@ -16,4 +16,4 @@ extraArgs:
 # permissions for cert-manager
 serviceAccount:
   annotations:
-    eks.amazonaws.com/role-arn: "arn:aws:iam::972067303716:role/cert-manager-20260213222926087600000002"
+    eks.amazonaws.com/role-arn: "arn:aws:iam::972067303716:role/cert-manager-20260214215043215400000001"
