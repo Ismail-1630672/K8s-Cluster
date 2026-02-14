@@ -12,8 +12,7 @@ spec:
     repoURL: https://github.com/Ismail-1630672/K8s-Cluster.git 
     targetRevision: HEAD 
     path: deployment/apps
-    directory:
-      recurse: true 
+    
       
   destination: #where to deploy, basically reference to the target cluster and namespace
     server: https://kubernetes.default.svc #points to kubernetes API server for cluster
